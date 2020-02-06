@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 80px;
+    background: #333;
+    position: relative;
+
+}
+
+header nav .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+header .logo {
+    background: url('./assets/logo.svg');
+    height: 30px;
+    width: 30px;
+    background-size: 30px;
+    padding: 0.5rem;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+header li {
+    color: white;
+    list-style: none;
+    margin: 0;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    top: 40%;
+    right: 2%;
+    display: none;
+}
+
+.hamburger div {
+    width: 23px;
+    height: 1px;
+    margin-bottom: 9px;
+    background-color: #fff;
+    transition: 0.2s ease-in
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - 
+HERO
+- - - - - - - - - - - - - - - - - - - - - - - - */
+.hero {
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0.4)
+        ),
+        url('https://images.unsplash.com/photo-1458668383970-8ddd3927deed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1047&q=80');
+    background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+    padding-top: 10vh;
+}
+
+.hero h1 {
+    font-size: 80px;
+    font-weight: 300;
+    margin-bottom: 1px;
+}
+.hero h2 {
+    margin-top: 0;
+}
+
+.hero p {
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.hero .wrapper {
+    padding: 1rem;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - 
+MAIN CONTENT
+- - - - - - - - - - - - - - - - - - - - - - - - */
+.main-content {
+    padding: 80px 0;
+}
+
+.main-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.main-content .wrapper {
+    padding: 1rem;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - 
+FOOTER
+- - - - - - - - - - - - - - - - - - - - - - - - */
+footer {
+    height: 300px;
+    background: #333;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 600px) {
+    header ul {
+        /* display: none; */
+        position: absolute;
+        top: 0;
+        left: 100%;
+        height: 100vh;
+        width: 50%;
+        flex-direction: column;
+        background: #222;
+        justify-content: initial;   
+        padding: 1.2rem;
+        transition: 0.2s ease-in;
+        
+    }
+
+    header ul li {
+        padding-top: 1rem;
+    }
+
+    header .hamburger {
+        display: block;
+        z-index: 2;
+    }
+}
+
+
+.active {
+    transform: translateX(-100%);
+}
+
+.toggle .line1 {
+    transform: rotateZ(-405deg) translate(-8px, 6px);
+   
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotateZ(405deg) translate(-8px, -6px)
+    
+  }
